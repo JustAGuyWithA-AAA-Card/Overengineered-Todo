@@ -27,8 +27,9 @@ A hilariously overengineered To-Do app featuring:
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/<username>/stupidly-overengineered-todo.git
+   https://github.com/JustAGuyWithA-AAA-Card/Overengineered-Todo.git
 
     2. Open index.html in your browser.
+
 
     3. Start adding tasks and enjoy the insults.
