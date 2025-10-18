@@ -29,7 +29,7 @@ A hilariously overengineered To-Do app featuring:
    ```bash
    https://github.com/JustAGuyWithA-AAA-Card/Overengineered-Todo.git
 
-    2. Open index.html in your browser.
+2. Open index.html in your browser.
 
+3. Start adding tasks and enjoy the insults.
 
-    3. Start adding tasks and enjoy the insults.
