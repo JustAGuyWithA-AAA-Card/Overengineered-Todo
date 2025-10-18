@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stupidly Overengineered To-Do App</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="background"></canvas>
+
+<div id="app">
+  <h1>Overengineered To-Do App</h1>
+  <div id="inputArea">
+    <input id="taskInput" placeholder="Enter a task...">
+    <button id="addBtn">Add</button>
+    <button id="clearBtn">Clear All</button>
+    <button id="themeBtn">🌙 Theme</button>
+    <button id="settingsBtn">⚙️ Settings</button>
+  </div>
+  <ul id="taskList"></ul>
+</div>
+
+<div id="settingsPopup" class="popup">
+  <div class="popup-content">
+    <h2>Settings</h2>
+    <label>Max Dots: <input type="number" id="maxDotsInput" min="10" max="500"></label>
+    <label>Min Dots: <input type="number" id="minDotsInput" min="10" max="150"></label>
+    <label>Max Line Distance: <input type="number" id="maxDistInput" min="50" max="300"></label>
+    <label>Dot Speed: <input type="range" id="dotSpeedInput" min="0.1" max="3" step="0.1"></label>
+    <label>Pulse Intensity: <input type="range" id="pulseInput" min="0" max="5" step="0.1"></label>
+    <label>Line Width: <input type="range" id="lineWidthInput" min="0.1" max="3" step="0.1"></label>
+    <label>Color Saturation: <input type="range" id="saturationInput" min="0" max="100" step="1"></label>
+    <label>Line Opacity: <input type="range" id="lineOpacityInput" min="0" max="1" step="0.05"></label>
+    <label>Background Brightness: <input type="range" id="bgBrightnessInput" min="0" max="1" step="0.05"></label>
+    <label>Parallax Strength: <input type="range" id="parallaxInput" disabled></label>
+    <button id="applySettings">Apply</button>
+    <button id="closeSettings">Close</button>
+  </div>
+</div>
+
+<div id="notifications"></div>
+<script src="script.js"></script>
+</body>
+</html>

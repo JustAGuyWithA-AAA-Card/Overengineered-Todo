@@ -1,0 +1,131 @@
+:root {
+  --accent: #ff8c00;
+  --bg-dark: #111;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  overflow: hidden;
+  color: white;
+  background: var(--bg-dark);
+}
+
+#background {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+#app {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding-top: 50px;
+}
+
+#inputArea input {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  width: 220px;
+  font-size: 1rem;
+}
+
+#inputArea button {
+  padding: 12px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+#taskList {
+  margin-top: 20px;
+  list-style: none;
+  padding: 0;
+  width: 90%;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#taskList li {
+  margin: 10px 0;
+  padding: 14px 20px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+#taskList button {
+  cursor: pointer;
+  background: #ff4444;
+  border: none;
+  border-radius: 6px;
+  padding: 5px 10px;
+  font-size: 1rem;
+}
+
+#taskList {
+  max-height: 400px; /* adjust as needed */
+  overflow-y: auto;
+  padding: 0;
+  margin: 0;
+}
+
+#taskList li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+body.dark #taskList li {
+  background: rgba(0,0,0,0.3);
+  color: #eee;
+}
+
+/* Theme button style */
+#themeBtn {
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 5px;
+  background: #444;
+  color: white;
+  border: none;
+}
+
+.popup { display: none; position: fixed; z-index: 10; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); backdrop-filter: blur(5px); justify-content: center; align-items: center; }
+.popup-content { background: rgba(255,255,255,0.1); padding: 20px; border-radius: 20px; text-align: center; width: 300px; max-height: 80%; overflow-y: auto; color: white; }
+.popup-content label { display: block; margin: 10px 0; }
+.popup-content input { width: 80%; }
+
+#notifications { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); z-index: 20; display: flex; flex-direction: column-reverse; gap: 10px; }
+.notification { position: relative; background: rgba(255,0,0,0.9); padding: 10px 20px; border-radius: 10px; color: white; display: flex; justify-content: space-between; align-items: center; min-width: 220px; max-width: 300px; overflow: hidden; transform: translateY(50px); opacity: 0; animation: slideIn 0.4s forwards; }
+@keyframes slideIn { to { transform: translateY(0); opacity: 1; } }
+.notification-exit { animation: slideOut 0.4s forwards; }
+@keyframes slideOut { to { transform: translateY(50px); opacity: 0; } }
+.notification-progress { position: absolute; bottom: 0; left: 0; height: 3px; background: yellow; width: 100%; border-radius: 0 0 10px 10px; }
+.notification button { background: transparent; border: none; color: white; font-weight: bold; cursor: pointer; }
+
+@media (max-width:600px){
+  #inputArea { display:flex; flex-direction:column; gap:10px; align-items:center; }
+  #inputArea input,#inputArea button { width:80%; }
+  #taskList li { font-size:1rem; padding:12px; }
+  .popup-content { width:90%; }
+}
+
+button { touch-action: manipulation; }
