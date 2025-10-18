@@ -26,10 +26,13 @@ A hilariously overengineered To-Do app featuring:
 ## Installation / Local Use
 
 1. Clone this repository:
-   ```bash
+   ```
    https://github.com/JustAGuyWithA-AAA-Card/Overengineered-Todo.git
+   or
+   gh repo clone JustAGuyWithA-AAA-Card/Overengineered-Todo
 
 2. Open index.html in your browser.
 
 3. Start adding tasks and enjoy the insults.
+
 
